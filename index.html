@@ -30,6 +30,13 @@
     max-width: 450px;
     pointer-events: none;
     z-index: 0;
+    transition: opacity 0.35s ease;
+  }
+  /* Mobile-only: fade hero out once user starts scrolling */
+  @media (max-width: 700px) {
+    body.scrolled .hero {
+      opacity: 0;
+    }
   }
   .hero img {
     display: block;
@@ -255,6 +262,27 @@
   </div>
 
   <div class="foot">&copy; Patrick Perez</div>
+
+  <script>
+    // Mobile-only: fade the hero out as soon as the user starts scrolling.
+    (function () {
+      var mq = window.matchMedia('(max-width: 700px)');
+      function onScroll() {
+        if (!mq.matches) {
+          document.body.classList.remove('scrolled');
+          return;
+        }
+        if (window.scrollY > 8) {
+          document.body.classList.add('scrolled');
+        } else {
+          document.body.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    })();
+  </script>
 
 </body>
 </html>
