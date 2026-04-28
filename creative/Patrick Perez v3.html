@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick Perez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100vh;
+  }
+
+  /* HERO — fixed, always centered on viewport */
+  .hero {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    max-width: 450px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* CONTENT — scrolls over the fixed hero, anchored right */
+  .content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 4vw 3vw 6vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  main {
+    width: min(38vw, 520px);
+    text-align: right;
+  }
+
+  section {
+    margin-bottom: 1.6rem;
+  }
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.66rem;
+    line-height: 1.42;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 0.03rem 0;
+  }
+
+  .role {
+    opacity: 0.55;
+  }
+
+  .title-q {
+    font-style: italic;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    pointer-events: none;
+  }
+
+  .foot {
+    position: fixed;
+    bottom: 1vw;
+    right: 1.6vw;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    z-index: 2;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      width: 78vw;
+    }
+    main {
+      width: min(60vw, 420px);
+    }
+    .content {
+      padding: 8vw 6vw 10vw;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .hero {
+      width: 88vw;
+      opacity: 0.85;
+    }
+    main {
+      width: 100%;
+    }
+    li { font-size: 0.78rem; }
+    h2 { font-size: 0.95rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="assets/patrick-perez.png" alt="Patrick Perez" />
+  </div>
+
+  <div class="content">
+    <main>
+
+      <section>
+        <h2>Music Videos</h2>
+        <ul>
+          <li>Justin Lanning &mdash; <span class="title-q">&ldquo;Air I Breathe&rdquo;</span> <span class="role">(Director)</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Short Films &mdash; In Development</h2>
+        <ul>
+          <li><span class="title-q">&ldquo;The Dilemma&rdquo;</span> (2025) <span class="role">&mdash; Writer / Director / Producer</span></li>
+          <li><span class="title-q">&ldquo;The I.C.E. Man&rdquo;</span> (2026) <span class="role">&mdash; Writer / Director / Producer</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Commercials</h2>
+        <ul>
+          <li>Nike 50th &mdash; <span class="title-q">&ldquo;Don&rsquo;t Stop&rdquo;</span> Spec <span class="role">&mdash; Director / Editor</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Television</h2>
+        <ul>
+          <li>Good Day L.A. <span class="role">&mdash; Director of News Features</span></li>
+          <li>Angels &amp; Airwaves Live <span class="role">&mdash; Director of New Media</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Photo</h2>
+        <ul>
+          <li>Palm Springs Int&rsquo;l Film Festival</li>
+          <li>Art Party 2026</li>
+          <li>Jonathan Bennett Walk of Fame Star</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Streaming Services</h2>
+        <ul>
+          <li>UFC Fight Pass</li>
+          <li>Crunchyroll</li>
+          <li>Valorous TV</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Mobile Channel Launches</h2>
+        <ul>
+          <li>Sony Music</li>
+          <li>The Weather Channel</li>
+          <li>ABC Television</li>
+          <li>Star Magazine</li>
+          <li>National Enquirer</li>
+          <li>Univision</li>
+          <li>FOX Sports</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Awards</h2>
+        <ul>
+          <li>3 Emmy Awards</li>
+          <li>5 Golden Mike Awards</li>
+          <li>Peabody Awards <span class="role">(shared)</span></li>
+          <li>Nevada Film Festival &mdash; Gold Reel Award, Music Video</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Celebrity Segments</h2>
+        <ul>
+          <li>Fashion segment on Cindy Crawford &amp; The Brewer Twins for FOX</li>
+          <li>Celebrity profile on Ryan Seacrest (<span class="title-q">&ldquo;Jeopardy&rdquo;</span>) for FOX</li>
+          <li>Fashion segment on Hermes luxury brand for Good Day L.A.</li>
+          <li>Celebrity profile on Herb Ritts for FOX</li>
+          <li>Celebrity profile on Tyrese Gibson (<span class="title-q">&ldquo;Fast &amp; Furious&rdquo;</span>) for FOX</li>
+          <li>Celebrity interview with the Black Eyed Peas</li>
+          <li>Celebrity interview with first female supermodel Veronica Webb</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Prior Affiliations</h2>
+        <ul>
+          <li>CBS</li>
+          <li>FOX</li>
+          <li>PBS</li>
+          <li>UFC</li>
+          <li>Sony Pictures</li>
+          <li>Crunchyroll</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <ul>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="https://www.imdb.com/name/nm5192007/?ref_=pro_nmovr_ov_visitcons">IMDB</a></li>
+          <li><a href="#">Aperium AI</a></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="foot">&copy; Patrick Perez</div>
+
+</body>
+</html>
